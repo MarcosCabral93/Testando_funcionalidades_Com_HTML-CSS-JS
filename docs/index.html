@@ -1,175 +1,175 @@
-<! DOCTYPE html >
-< html  lang = " pt-br " >
-< cabeça >
-    < meta  charset = " UTF-8 " >
-    < meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
-    < meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
-    < link  rel = " stylesheet " href = " reset.css " >
-    < link  rel = " stylesheet " type = " text / css " href = " copia_cab_fot.css " >
-    < link  rel = " stylesheet " type = " text / css " href = " style.css " >
-    < título > Documento </ título >
-</ head >
-< corpo >
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="copia_cab_fot.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
 
-    < header  class = " cabecalho " >
+    <header class="cabecalho">
         
-        < div  class = " container-cima " >
+        <div class="container-cima">
 
-            < img  src = " logo.png " alt = "" >
-            < h1  class = " titulo " >
-                M $ $ 0LUT1ON $
-            </ h1 >
+            <img src="logo.png" alt="">
+            <h1 class="titulo">
+                M$ $0LUT1ON$
+            </h1>
 
-            < nav  class = " cabecalho-nav " >
-                < A  class = " Cabeçalho item " href =" adote.html " > Início </ a >
-                < A  class = " Cabeçalho item " href =" # " > Sobre </ a >
-                < A  class = " Cabeçalho item " href =" # " > Contato </ a >
-            </ nav >
-        </ div >
-    </ header >
-    < principal >
-        < section  class = " container " >
-            < div  class = " conteudo1 " >
-                < h2 > Algoritmo para Saber se o individuo pode beber </ h2 >
-                < p > Para saber se pode beber, digite sua idade < input  id = " inputBloco1 " /> </ p >
-            < button  onclick = " dirigirEbeber () " id = " buttonBloco1 " > obter resultado </ button >
-            </ div >
-            < div  class = " conteudo2 " >
-                < h2 > Algoritmo para Saber a quantidade de quilometros seu carro ainda pode percorrer </ h2 >
-                < p > Insira a quantidade de combustivel em seu carro < input  id = " inputBloco2-1 " /> </ p >
-               < p > Insira o consumo médio do seu carro < input  id = " inputBloco2-2 " >  </ p >
-                < button  onclick = " previsaoRodagem () " id = " buttonBloco2 " > obter resultado </ button >
-            </ div >
-            < div  class = " conteudo3 " >
-                < h2 > Desafio Supremo !! </ h2 >
-                < p > A IA escolhe 3 números aleatórios de 0 a 10, tente descobrir < input  id = " inputBloco3 " /> </ p >
-                < button  onclick = " verifica () " id = " buttonBloco3 " > obter resultado </ button >
-            </ div >
+            <nav class="cabecalho-nav">
+                <a class="cabecalho-item" href="adote.html">Home</a>
+                <a class="cabecalho-item" href="#">Sobre</a>
+                <a class="cabecalho-item" href="#">Contato</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="conteudo1">
+                <h2> Algoritmo para Saber se o individuo pode beber</h2>
+                <p> Para saber se pode beber, digite sua idade <input id="inputBloco1"/></p>
+            <button onclick="dirigirEbeber()" id="buttonBloco1"> obter resultado</button>
+            </div>
+            <div class="conteudo2">
+                <h2> Algoritmo para Saber a quantidade de quilometros seu carro ainda poderá percorrer</h2>
+                <p> Insira a quantidade de combustivel há em seu carro <input id="inputBloco2-1"/> </p>
+               <p> Insira o consumo médio do seu carro <input id="inputBloco2-2"> </p>
+                <button onclick="previsaoRodagem()" id="buttonBloco2"> obter resultado</button>
+            </div>
+            <div class="conteudo3">
+                <h2> Desafio Supremo!!</h2>
+                <p> A IA escolheu  3  números aleatorios de 0 a 10, tente descobrir <input id="inputBloco3"/> </p>
+                <button onclick="verifica()" id="buttonBloco3"> obter resultado</button>
+            </div>
 
-      </ seção >
-    </ main >
-    < rodapé >
-        < div  class = " espaco-rodape " >
-            < ul  class = " itens-rodape " >
-                < li >  < img  src = " logo.png " alt = " resiia " >  </ li >
-                < li . >
-                    < p  class = " rodape " > & cópia Todos os direitos Marcos Paulo </ p >
-                    </ li >
-                    < li >  < i  class = " fab fa-facebook-f " > </ i >  </ li >
-            </ ul >
+      </section>
+    </main>
+    <footer>
+        <div class="espaco-rodape">
+            <ul class="itens-rodape">
+                <li> <img src="logo.png" alt="resiia"> </li>
+                <li.>
+                    <p class="rodape"> &copy Todos os direitos Marcos Paulo</p>
+                    </li>
+                    <li> <i class="fab fa-facebook-f"></i> </li>
+            </ul>
 
-        </ rodapé >
-    < script >
-         // Programa do BLOCO 1   
-        var  input  =  document . querySelector ( "# inputBloco1" ) ;
+        </footer>
+    <script>
+         //Programa do BLOCO 1   
+        var input = document.querySelector("#inputBloco1");
     
-        function  beberEdirigir ( )  {
+        function beberEdirigir() {
     
-            if ( entrada . valor  > = 18 )  {
+            if(input.value >=18) {
     
-            alerta ( "Você pode beber e dirigir!" ) ;
-            }  else  {
+            alert("Você pode beber e dirigir!");
+            } else {
     
-            alerta ( "Você não pode beber nem dirigir" ) ;
+            alert("Você não pode beber nem dirigir");
             }
     
-                    entrada . valor  =  "" ;
-                    entrada . foco ( ) ;
+                    input.value = "";
+                    input.focus();
     
         }
     
-        var  buttonBloco1  =  documento . querySelector ( "# buttonBloco1" ) ;
+        var buttonBloco1 = document.querySelector("#buttonBloco1");
     
-        buttonBloco1 . onclick  =  beberEdirigir ;
+        buttonBloco1.onclick = beberEdirigir;
         
 
 
-// Programa do Bloco 2
-var  inputBloco2pt1 =  documento . querySelector ( "# inputBloco2-1" ) ;
-var  inputBloco2pt2 =  documento . querySelector ( "# inputBloco2-2" ) ;
-var  buttonBloco2 = documento . querySelector ( "# buttonBloco2" ) ;
-var  previsao ;
-function  previsaoRodagem  ( ) {
-    previsao = ( inputBloco2pt1 . valor * inputBloco2pt2 . valor ) ;
-    alerta ( "Você pode rodar"  +  previsao +  "KM" ) ;
+//Programa do Bloco 2
+var inputBloco2pt1= document.querySelector("#inputBloco2-1");
+var inputBloco2pt2= document.querySelector("#inputBloco2-2");
+var buttonBloco2=document.querySelector("#buttonBloco2");
+var previsao;
+function previsaoRodagem (){
+    previsao=(inputBloco2pt1.value*inputBloco2pt2.value);
+    alert("Você poderá rodar " + previsao+ " KM");
     }
      
- var  buttonBloco2 = documento . querySelector ( "# buttonBloco2" ) ;
-buttonBloco2 . onclick =  previsaoRodagem ;
+ var buttonBloco2=document.querySelector("#buttonBloco2");
+buttonBloco2.onclick= previsaoRodagem;
 
 
 
 
-// Programa do bloco 3
-function  sorteia ( )  {
+//Programa do bloco 3
+function sorteia() {
 
-return  ( Math . random ( )  *  11 ) . toFixed ( 0 ) ;
+return (Math.random() * 11).toFixed(0);
 
 }
 
-function  sorteiaNumeros ( quantidade )  {
+function sorteiaNumeros(quantidade) {
 
- var  segredos  =  [ ] ;
+ var segredos = [];
 
- var  numero  =  1 ;
+ var numero = 1;
 
- while ( numero  <=  quantidade )  {
+ while(numero <= quantidade) {
 
-       var  numeroAleatorio  =  sorteia ( ) ;
-       var  achou  =  falso ;
+       var numeroAleatorio = sorteia();
+       var achou = false;
 
-       para ( var  posicao  =  0 ;  posicao  <  segredos . comprimento ;  posicao ++ )  {
+       for(var posicao = 0; posicao < segredos.length; posicao++) {
 
-              if ( segredos [ posicao ]  ==  numeroAleatorio ) {
-                    achou  =  verdadeiro ;
-                    pausa ;
+              if(segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
               }
 
        }
 
-       if  ( achou  ==  false )  {
-              segredos . push ( numeroAleatorio ) ;
-              numero ++ ;
+       if (achou == false) {
+              segredos.push(numeroAleatorio);
+              numero++;
        }
 
  }
 
- return  segredos ;
+ return segredos;
 
 }
 
-var  segredos  =  sorteiaNumeros ( 5 ) ;
+var segredos = sorteiaNumeros(5);
 
-var  inputBloco3  =  documento . querySelector ( "# inputBloco3" ) ;
-inputBloco3 . foco ( ) ;
+var inputBloco3 = document.querySelector("#inputBloco3");
+inputBloco3.focus();
 
- verificação de função ( )  {
+function verifica() {
 
-var  achou  =  falso ;
+var achou = false;
 
-para ( var  posicao  =  0 ;  posicao  <  segredos . comprimento ;  posicao ++ )  {
+for(var posicao = 0; posicao < segredos.length; posicao++) {
 
-       if ( inputBloco3 . value  ==  segredos [ posicao ] )  {
+       if(inputBloco3.value == segredos[posicao]) {
 
-              alerta ( "Você ACERTOU!" ) ;
-              achou  =  verdadeiro ;
-              pausa ;
+              alert("Você ACERTOU!");
+              achou = true;
+              break;
        } 
 }
 
-if ( achou  ==  false )  {
+if(achou == false) {
 
-       alerta ( "Você ERROU!" ) ;
+       alert("Você ERROU!");
 }
 
-inputBloco3 . valor  =  "" ;
-inputBloco3 . foco ( ) ;
+inputBloco3.value = "";
+inputBloco3.focus();
 
 }
 
-var  buttonBloco3  =  documento . querySelector ( "# buttonBloco3" ) ;
+var buttonBloco3 = document.querySelector("#buttonBloco3");
 
-buttonBloco3 . onclick  =  verifica ;
-</ script >
-</ body >
-</ html >
+buttonBloco3.onclick = verifica;
+</script>
+</body>
+</html>

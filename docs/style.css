@@ -1,0 +1,56 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.conteudo1{
+   width: 50%;
+height: 350px;
+background-color: rgba(162, 0, 255, 0.555);
+text-align: center;
+}
+.conteudo2{
+    width: 50%;
+    background-color: burlywood;
+    text-align: center;
+    height: 350px;
+}
+.conteudo3{
+
+    width: 50%;
+    background-color: chartreuse;
+    text-align: center; 
+    height: 350px;
+
+
+
+}
+input{
+    background-color: rgba(202, 209, 207, 0.555);
+    border-radius: 5px;
+    width: 50px;
+}
+button{
+    background-color: chocolate;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+button:hover{
+    transition: 1s ;
+    transform: scale(1.2);
+}
+h2{
+    font-size: 21px;
+}
+p{
+    font-size: 18px;
+    font-weight: bold;
+}
+main{
+    width: auto;
+    height: auto;
+    margin: 0 0;
+}

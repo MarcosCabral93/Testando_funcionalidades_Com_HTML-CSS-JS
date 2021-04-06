@@ -1,0 +1,129 @@
+
+/* Formatação do cabeçalho*/
+
+/* Parte do header*/
+
+.cabecalho {
+    background-color: black;
+    height: 150px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 3px gray;
+}
+
+/* container do conteudo do header*/
+
+.container-cima {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 90%;
+    vertical-align: middle;
+}
+
+/*parte do LOGO*/
+
+.titulo {
+    color: gold;
+    font-size: 40px;
+}
+.titulo:hover{
+    transform: scale(1.3); 
+    color: rgb(255, 217, 1);
+    transition: 1s;
+
+}
+
+/* parte do nav*/
+
+/* declarando o nav flex*/
+
+.cabecalho-nav {
+    display: flex;
+}
+
+/* ajustando itens*/
+
+/*mudar as cores apos a conclusao*/
+
+.cabecalho-item {
+    font-size: 20px;
+    margin: 0 2%;
+    border: 1px solid gold;
+    padding: 3px;
+    border-radius: 2px;
+    color: gold;
+}
+
+/* Propriedade de interação*/
+
+.cabecalho-item:hover {
+    color: brown;
+    font-size: 24px;
+    background-color: grey;
+}
+
+.titulo a:hover {
+   background-color: grey;
+    font-size: 45px;
+}
+/* foooter*/
+
+footer {
+    background-color: black;
+    height: 100px;
+    padding: 20px 0;
+}
+
+/*container do conteudo do rodape*/
+
+.espaco-rodape {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    vertical-align: middle;
+    justify-content: center;
+}
+
+.rodape {
+    font-size: 13px;
+    color: white;
+   font-style: italic;
+}
+.itens-rodape{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+     @media (max-width: 700px) {
+        .cabecalho{
+            height: 200px;
+        }
+    .container-cima img{
+        display: none;
+    }
+    .container-cima h1{
+        display: none;
+    }
+    .cabecalho-nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        background-color: black;
+        width: 100%;
+    }
+    .cabecalho-item{
+        margin: 2% 0;
+    }
+    
+     .plotagem{
+         width: 100%;       
+        }
+    }
