@@ -1,32 +1,4 @@
-/*
-function dirigirEbeber{
-    idade= parseInt(prompt("qual sua idade?"));
-    if (idade >=18){
 
-        alert("voce pode dirigir e beber ")
-    }
-    else{
-        alert("voce  não pode dirigir e beber ")
-    }
-    }
-
-
-
-dirigirEbeber();
-
-var qtdLitrosNotanque= parseInt(prompt("Qual a qtde de gasolina no seu carro?"));
-var quilometragem=  parseInt( prompt("Digite o consumeo medio do carro"));
-var previsao;
-function previsaoRodagem (qtdLitrosNotanque,quilometragem,previsao){
-    previsao= (qtdLitrosNotanque*quilometragem);
-    
-        return function(){
-        alert("Você poderá rodar " + previsao+ " KM");
-        }
-}
-
-previsaoRodagem(qtdLitrosNotanque,quilometragem)();
-*/
 var total;
 var numero1 = prompt("Digite o primeiro número");
 var numero2 = prompt("Digite o segundo número");
