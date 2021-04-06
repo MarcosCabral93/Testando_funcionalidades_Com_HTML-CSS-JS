@@ -1,37 +1,175 @@
-## Welcome to GitHub Pages
+<! DOCTYPE html >
+< html  lang = " pt-br " >
+< cabeça >
+    < meta  charset = " UTF-8 " >
+    < meta  http-equiv = " X-UA-Compatible " content = " IE = edge " >
+    < meta  name = " viewport " content = " width = device-width, initial-scale = 1.0 " >
+    < link  rel = " stylesheet " href = " reset.css " >
+    < link  rel = " stylesheet " type = " text / css " href = " copia_cab_fot.css " >
+    < link  rel = " stylesheet " type = " text / css " href = " style.css " >
+    < título > Documento </ título >
+</ head >
+< corpo >
 
-You can use the [editor on GitHub](https://github.com/paulokpv/projetos/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+    < header  class = " cabecalho " >
+        
+        < div  class = " container-cima " >
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+            < img  src = " logo.png " alt = "" >
+            < h1  class = " titulo " >
+                M $ $ 0LUT1ON $
+            </ h1 >
 
-### Markdown
+            < nav  class = " cabecalho-nav " >
+                < A  class = " Cabeçalho item " href =" adote.html " > Início </ a >
+                < A  class = " Cabeçalho item " href =" # " > Sobre </ a >
+                < A  class = " Cabeçalho item " href =" # " > Contato </ a >
+            </ nav >
+        </ div >
+    </ header >
+    < principal >
+        < section  class = " container " >
+            < div  class = " conteudo1 " >
+                < h2 > Algoritmo para Saber se o individuo pode beber </ h2 >
+                < p > Para saber se pode beber, digite sua idade < input  id = " inputBloco1 " /> </ p >
+            < button  onclick = " dirigirEbeber () " id = " buttonBloco1 " > obter resultado </ button >
+            </ div >
+            < div  class = " conteudo2 " >
+                < h2 > Algoritmo para Saber a quantidade de quilometros seu carro ainda pode percorrer </ h2 >
+                < p > Insira a quantidade de combustivel em seu carro < input  id = " inputBloco2-1 " /> </ p >
+               < p > Insira o consumo médio do seu carro < input  id = " inputBloco2-2 " >  </ p >
+                < button  onclick = " previsaoRodagem () " id = " buttonBloco2 " > obter resultado </ button >
+            </ div >
+            < div  class = " conteudo3 " >
+                < h2 > Desafio Supremo !! </ h2 >
+                < p > A IA escolhe 3 números aleatórios de 0 a 10, tente descobrir < input  id = " inputBloco3 " /> </ p >
+                < button  onclick = " verifica () " id = " buttonBloco3 " > obter resultado </ button >
+            </ div >
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+      </ seção >
+    </ main >
+    < rodapé >
+        < div  class = " espaco-rodape " >
+            < ul  class = " itens-rodape " >
+                < li >  < img  src = " logo.png " alt = " resiia " >  </ li >
+                < li . >
+                    < p  class = " rodape " > & cópia Todos os direitos Marcos Paulo </ p >
+                    </ li >
+                    < li >  < i  class = " fab fa-facebook-f " > </ i >  </ li >
+            </ ul >
 
-```markdown
-Syntax highlighted code block
+        </ rodapé >
+    < script >
+         // Programa do BLOCO 1   
+        var  input  =  document . querySelector ( "# inputBloco1" ) ;
+    
+        function  beberEdirigir ( )  {
+    
+            if ( entrada . valor  > = 18 )  {
+    
+            alerta ( "Você pode beber e dirigir!" ) ;
+            }  else  {
+    
+            alerta ( "Você não pode beber nem dirigir" ) ;
+            }
+    
+                    entrada . valor  =  "" ;
+                    entrada . foco ( ) ;
+    
+        }
+    
+        var  buttonBloco1  =  documento . querySelector ( "# buttonBloco1" ) ;
+    
+        buttonBloco1 . onclick  =  beberEdirigir ;
+        
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+// Programa do Bloco 2
+var  inputBloco2pt1 =  documento . querySelector ( "# inputBloco2-1" ) ;
+var  inputBloco2pt2 =  documento . querySelector ( "# inputBloco2-2" ) ;
+var  buttonBloco2 = documento . querySelector ( "# buttonBloco2" ) ;
+var  previsao ;
+function  previsaoRodagem  ( ) {
+    previsao = ( inputBloco2pt1 . valor * inputBloco2pt2 . valor ) ;
+    alerta ( "Você pode rodar"  +  previsao +  "KM" ) ;
+    }
+     
+ var  buttonBloco2 = documento . querySelector ( "# buttonBloco2" ) ;
+buttonBloco2 . onclick =  previsaoRodagem ;
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+// Programa do bloco 3
+function  sorteia ( )  {
 
-### Jekyll Themes
+return  ( Math . random ( )  *  11 ) . toFixed ( 0 ) ;
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/paulokpv/projetos/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+}
 
-### Support or Contact
+function  sorteiaNumeros ( quantidade )  {
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+ var  segredos  =  [ ] ;
+
+ var  numero  =  1 ;
+
+ while ( numero  <=  quantidade )  {
+
+       var  numeroAleatorio  =  sorteia ( ) ;
+       var  achou  =  falso ;
+
+       para ( var  posicao  =  0 ;  posicao  <  segredos . comprimento ;  posicao ++ )  {
+
+              if ( segredos [ posicao ]  ==  numeroAleatorio ) {
+                    achou  =  verdadeiro ;
+                    pausa ;
+              }
+
+       }
+
+       if  ( achou  ==  false )  {
+              segredos . push ( numeroAleatorio ) ;
+              numero ++ ;
+       }
+
+ }
+
+ return  segredos ;
+
+}
+
+var  segredos  =  sorteiaNumeros ( 5 ) ;
+
+var  inputBloco3  =  documento . querySelector ( "# inputBloco3" ) ;
+inputBloco3 . foco ( ) ;
+
+ verificação de função ( )  {
+
+var  achou  =  falso ;
+
+para ( var  posicao  =  0 ;  posicao  <  segredos . comprimento ;  posicao ++ )  {
+
+       if ( inputBloco3 . value  ==  segredos [ posicao ] )  {
+
+              alerta ( "Você ACERTOU!" ) ;
+              achou  =  verdadeiro ;
+              pausa ;
+       } 
+}
+
+if ( achou  ==  false )  {
+
+       alerta ( "Você ERROU!" ) ;
+}
+
+inputBloco3 . valor  =  "" ;
+inputBloco3 . foco ( ) ;
+
+}
+
+var  buttonBloco3  =  documento . querySelector ( "# buttonBloco3" ) ;
+
+buttonBloco3 . onclick  =  verifica ;
+</ script >
+</ body >
+</ html >
