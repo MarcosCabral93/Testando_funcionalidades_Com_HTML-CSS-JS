@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+   
+    <title>Document</title>
+</head>
+<html>
+
+    <header>
+        
+        <h1>MP $OLUT10N$</h1>
+        
+    </header>
+    <main>
+        <section class="container">
+            <div class="conteudo1">
+                <h2> Algoritmo para Saber se o individuo pode beber</h2>
+                <p> Para saber se pode beber, digite sua idade <input id="inputBloco1"/></p>
+            <button onclick="dirigirEbeber()" id="buttonBloco1"> obter resultado</button>
+            </div>
+            <div class="conteudo2">
+                <h2> Algoritmo para Saber a quantidade de quilometros seu carro ainda poderá percorrer</h2>
+                <p> Insira a quantidade de combustivel há em seu carro <input id="inputBloco2-1"/> </p>
+               <p> Insira o consumo médio do seu carro <input id="inputBloco2-2"> </p>
+                <button onclick="previsaoRodagem()" id="buttonBloco2"> obter resultado</button>
+            </div>
+            <div class="conteudo3">
+                <h2> Desafio Supremo!!</h2>
+                <p> A IA escolheu  3  números aleatorios de 0 a 10, tente descobrir <input id="inputBloco3"/> </p>
+                <button onclick="verifica()" id="buttonBloco3"> obter resultado</button>
+            </div>
+
+      </section>
+    </main>
+    <script>
+         //Programa do BLOCO 1   
+        var input = document.querySelector("#inputBloco1");
+    
+        function beberEdirigir() {
+    
+            if(input.value >=18) {
+    
+            alert("Você pode beber e dirigir!");
+            } else {
+    
+            alert("Você não pode beber nem dirigir");
+            }
+    
+                    input.value = "";
+                    input.focus();
+    
+        }
+    
+        var buttonBloco1 = document.querySelector("#buttonBloco1");
+    
+        buttonBloco1.onclick = beberEdirigir;
+        
+
+
+//Programa do Bloco 2
+var inputBloco2pt1= document.querySelector("#inputBloco2-1");
+var inputBloco2pt2= document.querySelector("#inputBloco2-2");
+var buttonBloco2=document.querySelector("#buttonBloco2");
+var previsao;
+function previsaoRodagem (){
+    previsao=(inputBloco2pt1.value*inputBloco2pt2.value);
+    alert("Você poderá rodar " + previsao+ " KM");
+    }
+     
+ var buttonBloco2=document.querySelector("#buttonBloco2");
+buttonBloco2.onclick= previsaoRodagem;
+
+
+
+
+//Programa do bloco 3
+function sorteia() {
+
+return (Math.random() * 11).toFixed(0);
+
+}
+
+function sorteiaNumeros(quantidade) {
+
+ var segredos = [];
+
+ var numero = 1;
+
+ while(numero <= quantidade) {
+
+       var numeroAleatorio = sorteia();
+       var achou = false;
+
+       for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+              if(segredos[posicao] == numeroAleatorio){
+                    achou = true;
+                    break;
+              }
+
+       }
+
+       if (achou == false) {
+              segredos.push(numeroAleatorio);
+              numero++;
+       }
+
+ }
+
+ return segredos;
+
+}
+
+var segredos = sorteiaNumeros(5);
+
+var inputBloco3 = document.querySelector("#inputBloco3");
+inputBloco3.focus();
+
+function verifica() {
+
+var achou = false;
+
+for(var posicao = 0; posicao < segredos.length; posicao++) {
+
+       if(inputBloco3.value == segredos[posicao]) {
+
+              alert("Você ACERTOU!");
+              achou = true;
+              break;
+       } 
+}
+
+if(achou == false) {
+
+       alert("Você ERROU!");
+}
+
+inputBloco3.value = "";
+inputBloco3.focus();
+
+}
+
+var buttonBloco3 = document.querySelector("#buttonBloco3");
+
+buttonBloco3.onclick = verifica;
+</script>
+</html>
